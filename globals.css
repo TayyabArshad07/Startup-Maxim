@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-black: black;
+  --text-white: white;
+  /* --background-color: #e24545; */
+  /* --secondary-color: #ffd34e; */
+  --primary-color: #00bf63;
+  --secondary-color: #ffbd59;
+  --background-color: #ff5757;
+  --text-gray: #b4b4b4;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*    About Us    */
+
+.about-section {
+  @apply flex min-w-fit mx-[20px] my-[50px] justify-around max-lg:flex-wrap max-md:mx-1;
+}
+.about-section .first-section {
+  @apply mt-[50px];
+}
+.about-section .first-section .heading {
+  @apply text-[40px] font-bold text-[var(--background-color)] max-md:text-[30px];
+}
+.about-section .first-section .para-1,.para-2 {
+  @apply mt-[20px] ml-[20px] text-gray-600;
+}
+.team-section .team-heading-top {
+  @apply text-center my-[50px];
+}
+.team-section .team-heading {
+  @apply flex justify-center flex-wrap items-center gap-[8px] font-black text-[30px];
+}
+.team-section .team-heading h1{
+  @apply text-[50px]
+}
+.testimonial .heading-section {
+  @apply text-center my-[50px];
+}
+.testimonial .heading-section .heading {
+  @apply flex justify-center flex-wrap items-center gap-[8px] font-black text-[50px];
+}
+
+.slider-section {
+  @apply w-full flex justify-center items-center;
+}
+/*    About Us    */
+
+/* Contact Us  */
+.uper-section {
+  @apply bg-[var(--background-color)] py-[50px] mb-[20px] text-center;
+}
+.uper-section .uper-section-heading {
+  @apply font-black text-[40px];
+}
+.second-section {
+  @apply text-center py-[70px];
+}
+.second-section .second-section-heading {
+  @apply flex justify-center flex-wrap items-center gap-[8px] font-black text-[30px];
+}
+.contact-detail-div {
+  @apply flex justify-around mt-[20px] flex-wrap leading-[50px];
+}
+.contact-detail-div .contact-detail-one {
+  @apply p-[40px];
+}
+.contact-detail-one .contact-one-heading {
+  @apply flex gap-3;
+}
+
+.contact-button {
+  @apply my-[30px] px-9 py-3 font-bold text-[#ffd126] bg-black rounded-lg transition-shadow duration-300;
+  box-shadow: 0 7px 0 0 #fff161;
+}
+.contact-button:hover {
+  @apply shadow-none text-black bg-[#ffd126] transition-all ease-in-out duration-500;
+}
+
+/* TeamCard */
+
+.card {
+  @apply relative w-[200px] h-[250px] mt-[10px];
+  perspective: 1000px;
+}
+.card-inner {
+  @apply w-full h-full transition-transform duration-1000;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  @apply w-full h-full absolute flex justify-center items-center;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.486);
+}
+.card-front {
+  @apply bg-[#e0e0e0] rounded-[10px];
+}
+.card-back {
+  @apply bg-[#fff] rounded-[10px];
+  transform: rotateY(180deg);
+}
+.person-image {
+  @apply w-full h-full rounded-[10px] object-cover;
+}
+.person-info {
+  @apply text-center leading-6;
+}
+.person-info-about {
+  @apply px-[25px] mt-[10px];
+}
+/* Slick slider */
+.slick-arrow {
+  margin: 0px 0%;
+}
+.slick-prev {
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 9999999999999999 !important;
+  background-color: var(--background-color) !important;
+}
+.slick-next {
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--background-color) !important;
+}
+.test .slick-next {
+  margin: 0px 3%;
+}
+.test .slick-prev {
+  margin: 0px 3%;
+}
+.client-slider .slick-arrow {
+  display: none !important;
+}
+.slick-dots li button:before {
+  content: "*" !important;
+  font-size: 60px !important;
+  padding: 20px 0px;
+}
+
+/* SocialIcons-Sidebar */
+
+.social Link {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.social {
+  position: fixed;
+  top: 15%;
+  left: 100%;
+  opacity: 50%;
+  transition: ease-in 1s !important;
+}
+.social:hover {
+  opacity: 100%;
+}
+.social ul {
+  padding: 0px;
+  transform: translate(-50px, 0);
+}
+.social ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 200px;
+  text-align: left;
+  padding: 4px 4px 4px 10px;
+  border-radius: 50px 0px 0px 50px;
+  transition: all 1s;
+}
+.social ul li:hover {
+  transform: translate(-110px, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.social ul li:hover Link {
+  color: #000000;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+}
+.social ul li:hover .social-image {
+  background: #fff;
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social ul li:hover .insta {
+  background-color: #e1306c;
+}
+.social ul li:hover .upwork {
+  background-color: #15a401;
+}
+.social ul li:hover .facebook {
+  background-color: #316ff6;
+}
+.social ul li:hover .fiverr {
+  background-color: #01ac2d;
+}
+.social ul li:hover .linkedin {
+  background-color: #0077b5;
+}
+.social ul li .social-image {
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  transform: rotate(0deg);
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 20%;
+  right: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding-top: 200px;
+  background-color: white;
+}
+.chat-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10%;
+  right: 20px;
+}
+.chat-send-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.chatbox {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.chatbox textarea {
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.chatbox input {
+  width: 100%;
+  padding: 7px;
+  color: #4caf50;
+  font-weight: 600;
+  /* border: 1px solid #4caf50; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hero Section */
+
+.hero-section {
+  @apply grid grid-cols-2 text-white my-[20px] gap-[10px];
+  background-image: linear-gradient(#c4ff69, #00bf63);
+}
+.hero-section .first-section {
+  @apply flex flex-col justify-center;
+}
+.first-section .heading {
+  @apply text-[40px] font-semibold mx-[20px];
+}
+.first-section .heading-1 {
+  @apply text-[45px] font-bold mx-[20px];
+}
+.first-section .para {
+  @apply text-[#ffbd] font-medium ml-[20px] mr-[60px];
+}
+.hero-section .btn {
+  @apply my-[30px] px-9 ml-[20px] py-3 font-bold bg-[#00bf63] text-[#c4ff69] rounded-lg transition-shadow duration-300;
+  box-shadow: 0 7px 0 0 #c4ff69;
+}
+.hero-section .btn:hover {
+  @apply shadow-none text-[#00bf63] bg-[#c4ff69] transition-all ease-in-out duration-500;
+}
